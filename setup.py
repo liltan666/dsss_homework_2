@@ -1,40 +1,38 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='math-quiz',
+    name='dsss_homework_2',
     version='0.1',
-    description='A simple math quiz game',
-    author='zeyu.tan',
-    author_email='liltan0303@outlook.com',
+    packages=find_packages(),  # 自动发现并包括所有子包
     url='https://github.com/liltan666/dsss_homework_2.git',
-    packages=find_packages(),
-    install_requires=[
-        'certifi==2024.8.30',
-        'charset-normalizer==3.4.0',
-        'docopt==0.6.2',
-        'idna==3.10',
-        'pipreqs==0.4.13',
-        'requests==2.32.3',
-        'urllib3==2.2.3',
-        'yarg==0.1.10'
-    ],
-    entry_points={
-        'console_scripts': [
-            'math_quiz=math_quiz:main'  # 假设 'math_quiz.py' 文件中有一个名为 'main' 的函数
-        ]
-    },
-    license='MIT',  # 确认使用的许可证
-    keywords='math game educational',  # 添加适用的关键词
+    license='MIT',
+    author='Microsoft',
+    author_email='contact@microsoft.com',  # 假设的邮箱，实际使用时需要替换为正确的邮箱
+    description='A Python package for DSSS Homework 2.',  # 添加一句描述项目的简单说明
+    long_description=open('README.md').read(),  # 添加长描述，通常是README文件的内容
+    long_description_content_type='text/markdown',  # 指定长描述的格式是Markdown
     classifiers=[
-        'Development Status :: 3 - Alpha',  # 根据实际开发状态调整
-        'Intended Audience :: Education',
-        'Topic :: Education',
-        'License :: OSI Approved :: MIT License',  # 确认许可证类型
-        'Programming Language :: Python :: 3',  # 确认支持的 Python 版本
+        'Development Status :: 3 - Alpha',  # 根据项目的实际情况调整
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Build Tools',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',  # 根据支持的Python版本调整
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
     ],
+    keywords='homework example project',  # 添加一些关键词，描述项目
+    install_requires=[
+        # 这里可以列出项目运行需要的依赖，例如:
+        # 'numpy',
+        # 'requests'
+    ],
+    python_requires='>=3.6',  # 指定支持的Python最低版本
 )
+entry_points={
+    'console_scripts': [
+        'math_quiz=math_quiz_module:main_function'
+    ]
+}
